@@ -1,0 +1,21 @@
+<h2 style="color:rgb(7, 7, 102)">student details</h2>
+
+<table style="background-color:#f8f8de;" class="table table-bordered">
+    <thead>
+        <style>
+        table {
+            border: 1px solid rgb(11, 11, 119);
+        }
+        </style>
+        <tr>
+            <th>Name</th>
+            <th>Mark</th>
+        </tr>
+    </thead>
+    <body *ngFor="let item of listarray">
+        <tr>
+        <td>{{item.name}}</td>
+        <td>{{item.mark}}</td>
+        </tr>
+    </body>
+</table>

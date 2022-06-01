@@ -1,0 +1,24 @@
+
+<h1 style="color:rgb(7, 7, 102)">Student Registration</h1>
+<div class="content">
+   <div class="form-group">
+      <label>name</label>
+      <br>
+      <input #name class="form_control">
+    </div>
+    <br>
+    <br>
+    <div class="form-group">
+      <label>mark</label>
+      <br>
+      <input #mark class="form_control">
+   </div>
+    <div class="form-group">
+      <br>
+      <button><a style="color:black;" (click)="TransferData(name.value,mark.value)"class="btn btn-primary" href ="#">submit</a></button>
+       </div>
+    </div>
+
+<div>
+  <app-child [namedata]="inputname" [markdata]="inputmark" [objdata]="inputobj"></app-child>
+</div>
