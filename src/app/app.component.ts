@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { ChildComponent } from './child/child.component';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,17 +10,22 @@ import { ChildComponent } from './child/child.component';
 export class AppComponent {
 @ViewChild(ChildComponent)viewdata !:ChildComponent;
 title = 'new-project';
-inputname='';
-inputmark='';
-inputobj={"name":"","mark":""};
-TransferData(name:any,mark:any){
-  this.inputname=name;
-  this.inputmark=mark;
-  this.inputobj={"name":name,"mark":mark};
-  this.viewdata.updatelist(this.inputobj);
+
+
+role =[
+  {id:1,name:"CEO"},
+  {id:2,name:"Director"},
+  {id:3,name:"Hr"},
+  {id:4,name:"Manager"}
+
+]
+inputobj={"name":"","mark":"","gender":"","role":""};
+CopiedObject = Object.assign({"name":"","mark":"","gender":""}, this.inputobj);
+
+TransferData(inputobj:any){
+this.viewdata.updatelist(this.inputobj);
 
 }
- 
 }
 
 
